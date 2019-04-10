@@ -14,14 +14,23 @@
 static Block* prepareGenesisBlock(){
   //TODO
 }
+inline string Block::_Returnheadernononce() const
+{
+    stringstream ss;
+    ss << _nIndex << sPrevHash << _tTime << _sData;
+    return ss.str();
+}
 
 inline string Block::_CalculateHash() const
 {
     stringstream ss;
-    ss << _nIndex << sPrevHash << _tTime << _sData << _nNonce;
-    cout << "choose one" << &ss;
-    return sha256(ss.str());
+    //ss << _nIndex << sPrevHash << _tTime << _sData << _nNonce;
+    ss << _nIndex << sPrevHash << _tTime << _sData;
+	cout << "choose one" << &ss;
+    //return sha256(ss.str());
+	return ss.str();
 }
+
 
 void Block::MineBlock(uint32_t nDifficulty)
 {

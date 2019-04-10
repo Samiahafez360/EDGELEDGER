@@ -1298,6 +1298,32 @@ main/fast:
 	$(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+#=============================================================================
+# Target rules for targets named Controller
+
+# Build rule for target.
+Controller: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Controller
+.PHONY : Controller
+
+# fast build rule for target.
+Controller/fast:
+	$(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/build
+.PHONY : Controller/fast
+
+#=============================================================================
+# Target rules for targets named helper
+
+# Build rule for target.
+helper: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 helper
+.PHONY : helper
+
+# fast build rule for target.
+helper/fast:
+	$(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/build
+.PHONY : helper/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1398,6 +1424,8 @@ help:
 	@echo "... test_merkle_tree_gadgets"
 	@echo "... test_set_commitment_gadget"
 	@echo "... main"
+	@echo "... Controller"
+	@echo "... helper"
 .PHONY : help
 
 

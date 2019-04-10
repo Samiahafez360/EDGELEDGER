@@ -21,6 +21,7 @@ public:
 
     void MineBlock(uint32_t nDifficulty);
 	 string _CalculateHash() const;
+	 string _Returnheadernononce() const;
 	 uint32_t _nIndex;
     
     string _sData;

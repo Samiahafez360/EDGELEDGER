@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMyLib.a  CMakeFiles/MyLib.dir/Controller.cpp.o CMakeFiles/MyLib.dir/Helper.cpp.o CMakeFiles/MyLib.dir/Block.cpp.o CMakeFiles/MyLib.dir/sha256.cpp.o
+/usr/bin/ranlib libMyLib.a

@@ -179,4 +179,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "depends/libsnark/libsnark/CMakeFiles/test_merkle_tree_gadgets.dir/DependInfo.cmake"
   "depends/libsnark/libsnark/CMakeFiles/test_set_commitment_gadget.dir/DependInfo.cmake"
   "src/CMakeFiles/main.dir/DependInfo.cmake"
+  "src/CMakeFiles/Controller.dir/DependInfo.cmake"
+  "src/CMakeFiles/helper.dir/DependInfo.cmake"
   )

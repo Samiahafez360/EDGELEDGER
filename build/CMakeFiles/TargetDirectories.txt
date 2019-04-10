@@ -160,7 +160,9 @@
 /home/samia/libsnarktut/build/src/CMakeFiles/install.dir
 /home/samia/libsnarktut/build/src/CMakeFiles/list_install_components.dir
 /home/samia/libsnarktut/build/src/CMakeFiles/rebuild_cache.dir
-/home/samia/libsnarktut/build/src/CMakeFiles/main.dir
 /home/samia/libsnarktut/build/src/CMakeFiles/edit_cache.dir
-/home/samia/libsnarktut/build/src/CMakeFiles/install/strip.dir
+/home/samia/libsnarktut/build/src/CMakeFiles/main.dir
+/home/samia/libsnarktut/build/src/CMakeFiles/Controller.dir
+/home/samia/libsnarktut/build/src/CMakeFiles/helper.dir
 /home/samia/libsnarktut/build/src/CMakeFiles/install/local.dir
+/home/samia/libsnarktut/build/src/CMakeFiles/install/strip.dir

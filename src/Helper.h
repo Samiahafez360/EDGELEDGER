@@ -28,10 +28,12 @@ public:
 	//Helper();
     
 	int minenozk(uint32_t _sNonce, uint32_t range,uint32_t nDifficulty,Block mBlock,std::chrono::system_clock::time_point starttime);
+	int minenozk_net(uint32_t _sNonce, uint32_t range,uint32_t nDifficulty,char* mBlock,long long starttime);
 
 	typedef libff::Fr<default_r1cs_ppzksnark_pp> FieldT;
 
-	int minezk(uint32_t start, uint32_t range,uint32_t nDifficulty,Block mBlock,r1cs_ppzksnark_proving_key<default_r1cs_ppzksnark_pp> pk, std::chrono::system_clock::time_point starttime);
+	int minezk(uint32_t start, uint32_t range,uint32_t nDifficulty,char* mBlock,r1cs_ppzksnark_proving_key<default_r1cs_ppzksnark_pp> pk,long long starttime);
+	//int minezk(uint32_t start, uint32_t range,uint32_t nDifficulty,Block mBlock,r1cs_ppzksnark_proving_key<default_r1cs_ppzksnark_pp> pk, std::chrono::system_clock::time_point starttime);
 
 	r1cs_ppzksnark_proof<default_r1cs_ppzksnark_pp> proof;
     char* getIP();
@@ -40,7 +42,7 @@ public:
 private:
 
 	string _CalculateHash(uint32_t _nIndex, uint32_t _nNonce,string sPrevHash,time_t _tTime,string _sData) const;
-	
+	string _CalculateHash( char* mBlock, uint32_t _nNonce) const;
     char* IP;
     
 

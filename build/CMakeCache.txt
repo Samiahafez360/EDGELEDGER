@@ -360,6 +360,9 @@ MONTGOMERY_OUTPUT:BOOL=ON
 //Enable parallelized execution, using OpenMP
 MULTICORE:BOOL=OFF
 
+//Dependencies for target
+MyLib_LIB_DEPENDS:STATIC=
+
 //Path to a library.
 OPENSSL_CRYPTO_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
 

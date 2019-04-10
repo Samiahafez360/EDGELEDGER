@@ -100,17 +100,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -121,6 +110,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -169,6 +169,36 @@ main/fast:
 	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+# Convenience name for target.
+src/CMakeFiles/Controller.dir/rule:
+	cd /home/samia/libsnarktut/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/Controller.dir/rule
+.PHONY : src/CMakeFiles/Controller.dir/rule
+
+# Convenience name for target.
+Controller: src/CMakeFiles/Controller.dir/rule
+
+.PHONY : Controller
+
+# fast build rule for target.
+Controller/fast:
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/build
+.PHONY : Controller/fast
+
+# Convenience name for target.
+src/CMakeFiles/helper.dir/rule:
+	cd /home/samia/libsnarktut/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/helper.dir/rule
+.PHONY : src/CMakeFiles/helper.dir/rule
+
+# Convenience name for target.
+helper: src/CMakeFiles/helper.dir/rule
+
+.PHONY : helper
+
+# fast build rule for target.
+helper/fast:
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/build
+.PHONY : helper/fast
+
 Block.o: Block.cpp.o
 
 .PHONY : Block.o
@@ -176,6 +206,8 @@ Block.o: Block.cpp.o
 # target to build an object file
 Block.cpp.o:
 	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/Block.cpp.o
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/Block.cpp.o
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/Block.cpp.o
 .PHONY : Block.cpp.o
 
 Block.i: Block.cpp.i
@@ -185,6 +217,8 @@ Block.i: Block.cpp.i
 # target to preprocess a source file
 Block.cpp.i:
 	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/Block.cpp.i
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/Block.cpp.i
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/Block.cpp.i
 .PHONY : Block.cpp.i
 
 Block.s: Block.cpp.s
@@ -194,6 +228,8 @@ Block.s: Block.cpp.s
 # target to generate assembly for a file
 Block.cpp.s:
 	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/Block.cpp.s
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/Block.cpp.s
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/Block.cpp.s
 .PHONY : Block.cpp.s
 
 Controller.o: Controller.cpp.o
@@ -203,6 +239,8 @@ Controller.o: Controller.cpp.o
 # target to build an object file
 Controller.cpp.o:
 	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/Controller.cpp.o
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/Controller.cpp.o
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/Controller.cpp.o
 .PHONY : Controller.cpp.o
 
 Controller.i: Controller.cpp.i
@@ -212,6 +250,8 @@ Controller.i: Controller.cpp.i
 # target to preprocess a source file
 Controller.cpp.i:
 	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/Controller.cpp.i
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/Controller.cpp.i
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/Controller.cpp.i
 .PHONY : Controller.cpp.i
 
 Controller.s: Controller.cpp.s
@@ -221,7 +261,36 @@ Controller.s: Controller.cpp.s
 # target to generate assembly for a file
 Controller.cpp.s:
 	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/Controller.cpp.s
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/Controller.cpp.s
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/Controller.cpp.s
 .PHONY : Controller.cpp.s
+
+Controllermain.o: Controllermain.cpp.o
+
+.PHONY : Controllermain.o
+
+# target to build an object file
+Controllermain.cpp.o:
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/Controllermain.cpp.o
+.PHONY : Controllermain.cpp.o
+
+Controllermain.i: Controllermain.cpp.i
+
+.PHONY : Controllermain.i
+
+# target to preprocess a source file
+Controllermain.cpp.i:
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/Controllermain.cpp.i
+.PHONY : Controllermain.cpp.i
+
+Controllermain.s: Controllermain.cpp.s
+
+.PHONY : Controllermain.s
+
+# target to generate assembly for a file
+Controllermain.cpp.s:
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/Controllermain.cpp.s
+.PHONY : Controllermain.cpp.s
 
 Helper.o: Helper.cpp.o
 
@@ -230,6 +299,8 @@ Helper.o: Helper.cpp.o
 # target to build an object file
 Helper.cpp.o:
 	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/Helper.cpp.o
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/Helper.cpp.o
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/Helper.cpp.o
 .PHONY : Helper.cpp.o
 
 Helper.i: Helper.cpp.i
@@ -239,6 +310,8 @@ Helper.i: Helper.cpp.i
 # target to preprocess a source file
 Helper.cpp.i:
 	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/Helper.cpp.i
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/Helper.cpp.i
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/Helper.cpp.i
 .PHONY : Helper.cpp.i
 
 Helper.s: Helper.cpp.s
@@ -248,7 +321,36 @@ Helper.s: Helper.cpp.s
 # target to generate assembly for a file
 Helper.cpp.s:
 	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/Helper.cpp.s
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/Helper.cpp.s
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/Helper.cpp.s
 .PHONY : Helper.cpp.s
+
+Helpermain.o: Helpermain.cpp.o
+
+.PHONY : Helpermain.o
+
+# target to build an object file
+Helpermain.cpp.o:
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/Helpermain.cpp.o
+.PHONY : Helpermain.cpp.o
+
+Helpermain.i: Helpermain.cpp.i
+
+.PHONY : Helpermain.i
+
+# target to preprocess a source file
+Helpermain.cpp.i:
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/Helpermain.cpp.i
+.PHONY : Helpermain.cpp.i
+
+Helpermain.s: Helpermain.cpp.s
+
+.PHONY : Helpermain.s
+
+# target to generate assembly for a file
+Helpermain.cpp.s:
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/Helpermain.cpp.s
+.PHONY : Helpermain.cpp.s
 
 main.o: main.cpp.o
 
@@ -284,6 +386,8 @@ sha256.o: sha256.cpp.o
 # target to build an object file
 sha256.cpp.o:
 	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/sha256.cpp.o
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/sha256.cpp.o
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/sha256.cpp.o
 .PHONY : sha256.cpp.o
 
 sha256.i: sha256.cpp.i
@@ -293,6 +397,8 @@ sha256.i: sha256.cpp.i
 # target to preprocess a source file
 sha256.cpp.i:
 	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/sha256.cpp.i
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/sha256.cpp.i
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/sha256.cpp.i
 .PHONY : sha256.cpp.i
 
 sha256.s: sha256.cpp.s
@@ -302,6 +408,8 @@ sha256.s: sha256.cpp.s
 # target to generate assembly for a file
 sha256.cpp.s:
 	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/sha256.cpp.s
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/Controller.dir/build.make src/CMakeFiles/Controller.dir/sha256.cpp.s
+	cd /home/samia/libsnarktut/build && $(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/sha256.cpp.s
 .PHONY : sha256.cpp.s
 
 # Help Target
@@ -313,19 +421,27 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... main"
 	@echo "... edit_cache"
-	@echo "... install/strip"
+	@echo "... main"
+	@echo "... Controller"
+	@echo "... helper"
 	@echo "... install/local"
+	@echo "... install/strip"
 	@echo "... Block.o"
 	@echo "... Block.i"
 	@echo "... Block.s"
 	@echo "... Controller.o"
 	@echo "... Controller.i"
 	@echo "... Controller.s"
+	@echo "... Controllermain.o"
+	@echo "... Controllermain.i"
+	@echo "... Controllermain.s"
 	@echo "... Helper.o"
 	@echo "... Helper.i"
 	@echo "... Helper.s"
+	@echo "... Helpermain.o"
+	@echo "... Helpermain.i"
+	@echo "... Helpermain.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

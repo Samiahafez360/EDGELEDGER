@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<CodeLite_Project Name="libsnark-tutorial" InternalType="" Version="10.0.0">
+<CodeLite_Project Name="libsnark-tutorial" InternalType="">
   <VirtualDirectory Name="src">
-    <File Name="../src/sha256.cpp"/>
     <File Name="../depends/libsnark/depends/ate-pairing/src/zm.cpp"/>
     <File Name="../depends/libsnark/depends/ate-pairing/src/zm2.cpp"/>
     <File Name="../depends/libsnark/depends/gtest/googlemock/src/gmock-all.cc"/>
@@ -156,8 +155,11 @@
     <File Name="../depends/libsnark/libsnark/zk_proof_systems/zksnark/ram_zksnark/tests/test_ram_zksnark.cpp"/>
     <File Name="../src/Block.cpp"/>
     <File Name="../src/Controller.cpp"/>
+    <File Name="../src/Controllermain.cpp"/>
     <File Name="../src/Helper.cpp"/>
+    <File Name="../src/Helpermain.cpp"/>
     <File Name="../src/main.cpp"/>
+    <File Name="../src/sha256.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="../depends/libsnark/depends/libff/libff/algebra/curves/alt_bn128/alt_bn128_g1.hpp"/>
@@ -247,7 +249,10 @@
     <File Name="../src/Controller.h"/>
     <File Name="../src/ControllerNetworkUtilities.hpp"/>
     <File Name="../src/Helper.h"/>
+    <File Name="../src/HelperNetworkUtilities.hpp"/>
+    <File Name="../src/sha256.h"/>
   </VirtualDirectory>
+
   <Settings Type="Executable">
     <Configuration Name="RelWithDebInfo" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g" Required="yes" PreCompiledHeader="">
@@ -263,9 +268,9 @@
       <PreBuild/>
       <PostBuild/>
       <CustomBuild Enabled="yes">
-        <RebuildCommand>/usr/bin/make -j 1 clean &amp;&amp; /usr/bin/make -j 1</RebuildCommand>
-        <CleanCommand>/usr/bin/make -j 1 clean</CleanCommand>
-        <BuildCommand>/usr/bin/make -j 1</BuildCommand>
+        <RebuildCommand>/usr/bin/make -j 3 clean &amp;&amp; /usr/bin/make -j 3</RebuildCommand>
+        <CleanCommand>/usr/bin/make -j 3 clean</CleanCommand>
+        <BuildCommand>/usr/bin/make -j 3</BuildCommand>
         <SingleFileCommand>/usr/bin/make -f$(ProjectPath)/Makefile $(CurrentFileName).cpp.o</SingleFileCommand>
         <PreprocessFileCommand/>
         <WorkingDirectory>$(WorkspacePath)</WorkingDirectory>

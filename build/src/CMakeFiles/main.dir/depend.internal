@@ -144,7 +144,27 @@ src/CMakeFiles/main.dir/Controller.cpp.o
  /home/samia/libsnarktut/src/Controller.h
  /home/samia/libsnarktut/src/ControllerNetworkUtilities.hpp
  /home/samia/libsnarktut/src/Helper.h
+ /usr/include/x86_64-linux-gnu/asm/socket.h
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
+ /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
+ /usr/include/x86_64-linux-gnu/bits/sigset.h
+ /usr/include/x86_64-linux-gnu/bits/sockaddr.h
+ /usr/include/x86_64-linux-gnu/bits/socket.h
+ /usr/include/x86_64-linux-gnu/bits/socket2.h
+ /usr/include/x86_64-linux-gnu/bits/socket_type.h
+ /usr/include/x86_64-linux-gnu/bits/time.h
+ /usr/include/x86_64-linux-gnu/bits/timex.h
+ /usr/include/x86_64-linux-gnu/bits/types.h
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h
+ /usr/include/x86_64-linux-gnu/bits/uio.h
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/gmp.h
+ /usr/include/x86_64-linux-gnu/sys/select.h
+ /usr/include/x86_64-linux-gnu/sys/socket.h
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h
+ /usr/include/x86_64-linux-gnu/sys/types.h
+ /usr/include/x86_64-linux-gnu/sys/uio.h
 src/CMakeFiles/main.dir/Helper.cpp.o
  ../depends/libsnark/depends/ate-pairing/include/bn.h
  ../depends/libsnark/depends/ate-pairing/include/zm.h
@@ -423,7 +443,27 @@ src/CMakeFiles/main.dir/main.cpp.o
  /home/samia/libsnarktut/src/ControllerNetworkUtilities.hpp
  /home/samia/libsnarktut/src/Helper.h
  /home/samia/libsnarktut/src/main.cpp
+ /usr/include/x86_64-linux-gnu/asm/socket.h
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
+ /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
+ /usr/include/x86_64-linux-gnu/bits/sigset.h
+ /usr/include/x86_64-linux-gnu/bits/sockaddr.h
+ /usr/include/x86_64-linux-gnu/bits/socket.h
+ /usr/include/x86_64-linux-gnu/bits/socket2.h
+ /usr/include/x86_64-linux-gnu/bits/socket_type.h
+ /usr/include/x86_64-linux-gnu/bits/time.h
+ /usr/include/x86_64-linux-gnu/bits/timex.h
+ /usr/include/x86_64-linux-gnu/bits/types.h
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h
+ /usr/include/x86_64-linux-gnu/bits/uio.h
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/gmp.h
+ /usr/include/x86_64-linux-gnu/sys/select.h
+ /usr/include/x86_64-linux-gnu/sys/socket.h
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h
+ /usr/include/x86_64-linux-gnu/sys/types.h
+ /usr/include/x86_64-linux-gnu/sys/uio.h
 src/CMakeFiles/main.dir/sha256.cpp.o
  /home/samia/libsnarktut/src/sha256.cpp
  /home/samia/libsnarktut/src/sha256.h

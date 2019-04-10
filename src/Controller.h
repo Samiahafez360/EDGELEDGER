@@ -26,12 +26,12 @@ public:
 	
 	void updateHelpers();
 	vector<Helper> helpers;
+	ControllerNetworkUtilities* netutils;
 
 private:
 	void sendrangetohelper(unsigned id, uint32_t indrange );
     void zkp_sendrangetohelper(unsigned id, uint32_t indrange );
-    
-	ControllerNetworkUtilities* netutils;
+
     uint32_t _nDifficulty;
     vector<Block> _vChain;
     

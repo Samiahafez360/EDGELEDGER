@@ -10,45 +10,52 @@ Controller.h
   Helper.cpp
   ControllerNetworkUtilities.hpp
 HelperNetworkUtilities.hpp
+
   Block.h
   Block.cpp
 sha256.h
 sha256.cpp
+PoW_bulk_hash_gadget.hpp
+
 )
 add_executable(
   helper
 
-  Helpermain.cpp
- Controller.h
-  Controller.cpp
-  Helper.h
+Helpermain.cpp
+Helper.h
   Helper.cpp
-  ControllerNetworkUtilities.hpp
-HelperNetworkUtilities.hpp
+Controller.h
+  Controller.cpp
+ControllerNetworkUtilities.hpp
+  HelperNetworkUtilities.hpp
   Block.h
   Block.cpp
-sha256.h
-sha256.cpp
+  sha256.h
+  sha256.cpp
+  PoW_bulk_hash_gadget.hpp
+   
 )
 add_executable(
   Controller
 
   Controllermain.cpp
-Controller.h
+  Controller.h
   Controller.cpp
   Helper.h
   Helper.cpp
   ControllerNetworkUtilities.hpp
-HelperNetworkUtilities.hpp
+  HelperNetworkUtilities.hpp
   Block.h
   Block.cpp
-sha256.h
-sha256.cpp
+  sha256.h
+  sha256.cpp
+  PoW_bulk_hash_gadget.hpp
 )
 target_link_libraries(
   helper
 
   snark
+
 
 )
 target_link_libraries(
@@ -74,6 +81,7 @@ target_include_directories(
   helper
 
   PUBLIC
+	PUBLIC/src
   ${DEPENDS_DIR}/libsnark
   ${DEPENDS_DIR}/libsnark/depends/libfqfft
 )

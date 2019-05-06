@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="/home/samia/libsnarktut/build/libsnark-tutorial.workspace">
-  <int Value="1" Name="m_selectedTab"/>
+  <int Value="6" Name="m_selectedTab"/>
   <wxString Value="/home/samia/libsnarktut/build/libsnark-tutorial.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
@@ -12,27 +12,26 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/samia/libsnarktut/src/Controller.cpp" Name="FileName"/>
-      <int Value="143" Name="FirstVisibleLine"/>
-      <int Value="153" Name="CurrentLine"/>
+      <int Value="8" Name="FirstVisibleLine"/>
+      <int Value="16" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/samia/libsnarktut/src/Helper.cpp" Name="FileName"/>
-      <int Value="81" Name="FirstVisibleLine"/>
-      <int Value="136" Name="CurrentLine"/>
+      <int Value="39" Name="FirstVisibleLine"/>
+      <int Value="85" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds">
         <IntVectorItem Value="8"/>
         <IntVectorItem Value="72"/>
         <IntVectorItem Value="78"/>
-        <IntVectorItem Value="101"/>
       </IntVector>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/samia/libsnarktut/src/Helper.h" Name="FileName"/>
-      <int Value="22" Name="FirstVisibleLine"/>
-      <int Value="41" Name="CurrentLine"/>
+      <int Value="27" Name="FirstVisibleLine"/>
+      <int Value="37" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -45,22 +44,22 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/samia/libsnarktut/src/main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="20" Name="CurrentLine"/>
+      <int Value="61" Name="FirstVisibleLine"/>
+      <int Value="76" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/samia/libsnarktut/src/ControllerNetworkUtilities.hpp" Name="FileName"/>
-      <int Value="31" Name="FirstVisibleLine"/>
-      <int Value="32" Name="CurrentLine"/>
+      <int Value="108" Name="FirstVisibleLine"/>
+      <int Value="115" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/samia/libsnarktut/src/Controllermain.cpp" Name="FileName"/>
-      <int Value="223" Name="FirstVisibleLine"/>
-      <int Value="242" Name="CurrentLine"/>
+      <int Value="161" Name="FirstVisibleLine"/>
+      <int Value="162" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -73,17 +72,42 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/samia/libsnarktut/src/HelperNetworkUtilities.hpp" Name="FileName"/>
-      <int Value="95" Name="FirstVisibleLine"/>
-      <int Value="100" Name="CurrentLine"/>
+      <int Value="132" Name="FirstVisibleLine"/>
+      <int Value="152" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks">
+        <wxString Value="119:3"/>
+      </wxArrayString>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/samia/libsnarktut/build/SerializeUtil.hpp" Name="FileName"/>
+      <int Value="10" Name="FirstVisibleLine"/>
+      <int Value="27" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
   </TabInfoArray>
   <SerializedObject Name="m_breakpoints">
-    <long Value="1" Name="Count"/>
+    <long Value="2" Name="Count"/>
     <SerializedObject Name="Breakpoint0">
       <wxString Value="/home/samia/libsnarktut/src/Controller.cpp" Name="file"/>
-      <int Value="164" Name="lineno"/>
+      <int Value="158" Name="lineno"/>
+      <wxString Value="" Name="function_name"/>
+      <wxString Value="" Name="memory_address"/>
+      <int Value="1" Name="bp_type"/>
+      <int Value="0" Name="watchpoint_type"/>
+      <wxString Value="" Name="watchpt_data"/>
+      <CData Name="commandlist"/>
+      <bool Value="0" Name="regex"/>
+      <bool Value="0" Name="is_temp"/>
+      <bool Value="1" Name="is_enabled"/>
+      <int Value="0" Name="ignore_number"/>
+      <wxString Value="" Name="conditions"/>
+      <int Value="0" Name="origin"/>
+    </SerializedObject>
+    <SerializedObject Name="Breakpoint1">
+      <wxString Value="/home/samia/libsnarktut/src/HelperNetworkUtilities.hpp" Name="file"/>
+      <int Value="137" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
       <int Value="1" Name="bp_type"/>

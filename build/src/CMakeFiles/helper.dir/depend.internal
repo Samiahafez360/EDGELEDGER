@@ -67,6 +67,8 @@ src/CMakeFiles/helper.dir/Controller.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/common/default_types/ec_pp.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/double.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/profiling.hpp
+ ../depends/libsnark/depends/libff/libff/../libff/common/rng.hpp
+ ../depends/libsnark/depends/libff/libff/../libff/common/rng.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
@@ -107,14 +109,21 @@ src/CMakeFiles/helper.dir/Controller.cpp.o
  ../depends/libsnark/libsnark/gadgetlib1/gadget.tcc
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/basic_gadgets.hpp
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/basic_gadgets.tcc
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/crh_gadget.hpp
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/digest_selector_gadget.hpp
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/digest_selector_gadget.tcc
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/hash_io.hpp
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/hash_io.tcc
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/knapsack/knapsack_gadget.hpp
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/knapsack/knapsack_gadget.tcc
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_aux.hpp
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_aux.tcc
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_components.hpp
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_components.tcc
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_gadget.hpp
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_gadget.tcc
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/merkle_tree/merkle_authentication_path_variable.hpp
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/merkle_tree/merkle_authentication_path_variable.tcc
  ../depends/libsnark/libsnark/gadgetlib1/pb_variable.hpp
  ../depends/libsnark/libsnark/gadgetlib1/pb_variable.tcc
  ../depends/libsnark/libsnark/gadgetlib1/protoboard.hpp
@@ -139,6 +148,7 @@ src/CMakeFiles/helper.dir/Controller.cpp.o
  ../depends/libsnark/libsnark/zk_proof_systems/ppzksnark/r1cs_ppzksnark/r1cs_ppzksnark.hpp
  ../depends/libsnark/libsnark/zk_proof_systems/ppzksnark/r1cs_ppzksnark/r1cs_ppzksnark.tcc
  ../depends/libsnark/libsnark/zk_proof_systems/ppzksnark/r1cs_ppzksnark/r1cs_ppzksnark_params.hpp
+ ../src/./PoW_bulk_hash_gadget.hpp
  /home/samia/libsnarktut/src/Block.h
  /home/samia/libsnarktut/src/Controller.cpp
  /home/samia/libsnarktut/src/Controller.h
@@ -227,6 +237,8 @@ src/CMakeFiles/helper.dir/Helper.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/common/default_types/ec_pp.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/double.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/profiling.hpp
+ ../depends/libsnark/depends/libff/libff/../libff/common/rng.hpp
+ ../depends/libsnark/depends/libff/libff/../libff/common/rng.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
@@ -267,14 +279,21 @@ src/CMakeFiles/helper.dir/Helper.cpp.o
  ../depends/libsnark/libsnark/gadgetlib1/gadget.tcc
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/basic_gadgets.hpp
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/basic_gadgets.tcc
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/crh_gadget.hpp
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/digest_selector_gadget.hpp
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/digest_selector_gadget.tcc
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/hash_io.hpp
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/hash_io.tcc
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/knapsack/knapsack_gadget.hpp
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/knapsack/knapsack_gadget.tcc
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_aux.hpp
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_aux.tcc
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_components.hpp
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_components.tcc
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_gadget.hpp
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_gadget.tcc
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/merkle_tree/merkle_authentication_path_variable.hpp
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/merkle_tree/merkle_authentication_path_variable.tcc
  ../depends/libsnark/libsnark/gadgetlib1/pb_variable.hpp
  ../depends/libsnark/libsnark/gadgetlib1/pb_variable.tcc
  ../depends/libsnark/libsnark/gadgetlib1/protoboard.hpp
@@ -299,6 +318,7 @@ src/CMakeFiles/helper.dir/Helper.cpp.o
  ../depends/libsnark/libsnark/zk_proof_systems/ppzksnark/r1cs_ppzksnark/r1cs_ppzksnark.hpp
  ../depends/libsnark/libsnark/zk_proof_systems/ppzksnark/r1cs_ppzksnark/r1cs_ppzksnark.tcc
  ../depends/libsnark/libsnark/zk_proof_systems/ppzksnark/r1cs_ppzksnark/r1cs_ppzksnark_params.hpp
+ ../src/./PoW_bulk_hash_gadget.hpp
  /home/samia/libsnarktut/src/Block.h
  /home/samia/libsnarktut/src/Helper.cpp
  /home/samia/libsnarktut/src/Helper.h
@@ -366,6 +386,8 @@ src/CMakeFiles/helper.dir/Helpermain.cpp.o
  ../depends/libsnark/depends/libff/libff/../libff/common/default_types/ec_pp.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/double.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/profiling.hpp
+ ../depends/libsnark/depends/libff/libff/../libff/common/rng.hpp
+ ../depends/libsnark/depends/libff/libff/../libff/common/rng.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.hpp
  ../depends/libsnark/depends/libff/libff/../libff/common/serialization.tcc
  ../depends/libsnark/depends/libff/libff/../libff/common/utils.hpp
@@ -406,14 +428,21 @@ src/CMakeFiles/helper.dir/Helpermain.cpp.o
  ../depends/libsnark/libsnark/gadgetlib1/gadget.tcc
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/basic_gadgets.hpp
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/basic_gadgets.tcc
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/crh_gadget.hpp
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/digest_selector_gadget.hpp
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/digest_selector_gadget.tcc
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/hash_io.hpp
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/hash_io.tcc
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/knapsack/knapsack_gadget.hpp
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/knapsack/knapsack_gadget.tcc
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_aux.hpp
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_aux.tcc
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_components.hpp
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_components.tcc
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_gadget.hpp
  ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_gadget.tcc
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/merkle_tree/merkle_authentication_path_variable.hpp
+ ../depends/libsnark/libsnark/gadgetlib1/gadgets/merkle_tree/merkle_authentication_path_variable.tcc
  ../depends/libsnark/libsnark/gadgetlib1/pb_variable.hpp
  ../depends/libsnark/libsnark/gadgetlib1/pb_variable.tcc
  ../depends/libsnark/libsnark/gadgetlib1/protoboard.hpp
@@ -438,14 +467,13 @@ src/CMakeFiles/helper.dir/Helpermain.cpp.o
  ../depends/libsnark/libsnark/zk_proof_systems/ppzksnark/r1cs_ppzksnark/r1cs_ppzksnark.hpp
  ../depends/libsnark/libsnark/zk_proof_systems/ppzksnark/r1cs_ppzksnark/r1cs_ppzksnark.tcc
  ../depends/libsnark/libsnark/zk_proof_systems/ppzksnark/r1cs_ppzksnark/r1cs_ppzksnark_params.hpp
+ ../src/./PoW_bulk_hash_gadget.hpp
  /home/samia/libsnarktut/src/Block.h
  /home/samia/libsnarktut/src/Controller.h
  /home/samia/libsnarktut/src/ControllerNetworkUtilities.hpp
- /home/samia/libsnarktut/src/Helper.cpp
  /home/samia/libsnarktut/src/Helper.h
  /home/samia/libsnarktut/src/HelperNetworkUtilities.hpp
  /home/samia/libsnarktut/src/Helpermain.cpp
- /home/samia/libsnarktut/src/sha256.h
  /usr/include/x86_64-linux-gnu/asm/socket.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/select.h

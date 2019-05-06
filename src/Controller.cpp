@@ -21,7 +21,7 @@
 
 using namespace libsnark;
 using namespace std;
-#define DIFFICULTY 1
+#define DIFFICULTY 2
 
 Controller::Controller(){
 	
@@ -56,6 +56,7 @@ void Controller::startMining(){
     
     //Prepare the attributes.
 	currentblock = new Block(_vChain.size(), "next block is being mined");
+	
 	int n = netutils->getnofAvailableHelpers();
 	long range = powl(2,DIFFICULTY+10);
 	long indrange = ceil (range*1.0 /n*1.0);
@@ -82,16 +83,24 @@ void Controller::sendrangetohelper(unsigned id, uint32_t indrange ){
 		
 	std::cout<<"\n thread "<< id <<"is starting" << indrange;
 	long long int t = static_cast<long long int> (std::chrono::system_clock::to_time_t(starttime));
-	string s = currentblock->_CalculateHash();
+	
+	// hash already calulated problem cleared all threads reading
+	string s = currentblock->allblock;
+
+	// all local vars no thread problem 
 	stringstream message;
 	message<< id<<"$"<<indrange<<"$"<<DIFFICULTY<<"$"<<s<<"$"<<t;
+	
 	char inchararr [message.str().size()+1];
 	message.str().copy(inchararr, message.str().size()+1);
 	inchararr[message.str().size()] ='\0';
+	
 	printf("Controller Message : Message  %s \r\n", message.str());
+	
 	//responses[id] = helpers[id].minenozk(id*indrange, indrange, DIFFICULTY, *currentblock,starttime);
 	netutils->send_message_to_helper(id, inchararr,message.str().size());
-	printf("Controller Message : Message sent  %s \r\n", message.str());
+	
+	printf("Controller Message : Message sent  %s to helper %d \r\n", message.str(),id );
 }
 
 
@@ -107,7 +116,7 @@ void Controller::zkp_startMining(){
 	//prepare the attributes
 	currentblock = new Block(_vChain.size(), "next block in being mined");
 	int n = netutils->getnofAvailableHelpers();
-	long range = powl(2,DIFFICULTY+10);
+	long range = powl(2,DIFFICULTY+1);
 	long indrange = ceil (range*1.0 /n*1.0);
 	// start threading and sending to helpers
 	
@@ -147,10 +156,11 @@ void Controller::zkp_sendrangetohelper(unsigned id, uint32_t indrange ){
 	helpersvk storevk;
 	storevk.rangeStart =id;
 	storevk.vk = keypair.vk;
+	
 	netutils->vks.push_back(storevk);
 	
 	
-	string s = currentblock->_CalculateHash();
+	string s = currentblock->allblock;
 	stringstream message;
 	
 	long long int t = static_cast<long long int> (std::chrono::system_clock::to_time_t(starttime));
@@ -161,21 +171,11 @@ void Controller::zkp_sendrangetohelper(unsigned id, uint32_t indrange ){
 	const string tmp =message.str();
 	
 	const char* inchararr = tmp.c_str();
-	printf("\n 6 thread %d is starting\r\n",id);
-	
-	//message.str().copy(inchararr, message.str().size());
-	
-	printf("\n 6 thread %d is starting\r\n",id);
-	
-	//inchararr[message.str().size()] ='\0';
-	printf("6 thread %d is starting\r\n",id);
+
 	
 	netutils->send_message_to_helper(id, inchararr,message.str().size());
 	printf("Controller Message :Message size : %d Message sent  %s \r\n", message.str().size(), message.str());
 
-	//verify the proof
-	//bool verified = r1cs_ppzksnark_verifier_strong_IC<default_r1cs_ppzksnark_pp>(keypair.vk, pb.primary_input(), helpers[id].proof);
-	//cout<<"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%the proof is "<< verified;
 }
 Block Controller::_GetLastBlock() const{
 	

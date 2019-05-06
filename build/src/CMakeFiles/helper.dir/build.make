@@ -81,33 +81,9 @@ src/CMakeFiles/helper.dir/Helpermain.cpp.o.provides: src/CMakeFiles/helper.dir/H
 src/CMakeFiles/helper.dir/Helpermain.cpp.o.provides.build: src/CMakeFiles/helper.dir/Helpermain.cpp.o
 
 
-src/CMakeFiles/helper.dir/Controller.cpp.o: src/CMakeFiles/helper.dir/flags.make
-src/CMakeFiles/helper.dir/Controller.cpp.o: ../src/Controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samia/libsnarktut/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/helper.dir/Controller.cpp.o"
-	cd /home/samia/libsnarktut/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/helper.dir/Controller.cpp.o -c /home/samia/libsnarktut/src/Controller.cpp
-
-src/CMakeFiles/helper.dir/Controller.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/helper.dir/Controller.cpp.i"
-	cd /home/samia/libsnarktut/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samia/libsnarktut/src/Controller.cpp > CMakeFiles/helper.dir/Controller.cpp.i
-
-src/CMakeFiles/helper.dir/Controller.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/helper.dir/Controller.cpp.s"
-	cd /home/samia/libsnarktut/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samia/libsnarktut/src/Controller.cpp -o CMakeFiles/helper.dir/Controller.cpp.s
-
-src/CMakeFiles/helper.dir/Controller.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/helper.dir/Controller.cpp.o.requires
-
-src/CMakeFiles/helper.dir/Controller.cpp.o.provides: src/CMakeFiles/helper.dir/Controller.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/Controller.cpp.o.provides.build
-.PHONY : src/CMakeFiles/helper.dir/Controller.cpp.o.provides
-
-src/CMakeFiles/helper.dir/Controller.cpp.o.provides.build: src/CMakeFiles/helper.dir/Controller.cpp.o
-
-
 src/CMakeFiles/helper.dir/Helper.cpp.o: src/CMakeFiles/helper.dir/flags.make
 src/CMakeFiles/helper.dir/Helper.cpp.o: ../src/Helper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samia/libsnarktut/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/helper.dir/Helper.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samia/libsnarktut/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/helper.dir/Helper.cpp.o"
 	cd /home/samia/libsnarktut/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/helper.dir/Helper.cpp.o -c /home/samia/libsnarktut/src/Helper.cpp
 
 src/CMakeFiles/helper.dir/Helper.cpp.i: cmake_force
@@ -127,6 +103,30 @@ src/CMakeFiles/helper.dir/Helper.cpp.o.provides: src/CMakeFiles/helper.dir/Helpe
 .PHONY : src/CMakeFiles/helper.dir/Helper.cpp.o.provides
 
 src/CMakeFiles/helper.dir/Helper.cpp.o.provides.build: src/CMakeFiles/helper.dir/Helper.cpp.o
+
+
+src/CMakeFiles/helper.dir/Controller.cpp.o: src/CMakeFiles/helper.dir/flags.make
+src/CMakeFiles/helper.dir/Controller.cpp.o: ../src/Controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/samia/libsnarktut/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/helper.dir/Controller.cpp.o"
+	cd /home/samia/libsnarktut/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/helper.dir/Controller.cpp.o -c /home/samia/libsnarktut/src/Controller.cpp
+
+src/CMakeFiles/helper.dir/Controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/helper.dir/Controller.cpp.i"
+	cd /home/samia/libsnarktut/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/samia/libsnarktut/src/Controller.cpp > CMakeFiles/helper.dir/Controller.cpp.i
+
+src/CMakeFiles/helper.dir/Controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/helper.dir/Controller.cpp.s"
+	cd /home/samia/libsnarktut/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/samia/libsnarktut/src/Controller.cpp -o CMakeFiles/helper.dir/Controller.cpp.s
+
+src/CMakeFiles/helper.dir/Controller.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/helper.dir/Controller.cpp.o.requires
+
+src/CMakeFiles/helper.dir/Controller.cpp.o.provides: src/CMakeFiles/helper.dir/Controller.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/helper.dir/build.make src/CMakeFiles/helper.dir/Controller.cpp.o.provides.build
+.PHONY : src/CMakeFiles/helper.dir/Controller.cpp.o.provides
+
+src/CMakeFiles/helper.dir/Controller.cpp.o.provides.build: src/CMakeFiles/helper.dir/Controller.cpp.o
 
 
 src/CMakeFiles/helper.dir/Block.cpp.o: src/CMakeFiles/helper.dir/flags.make
@@ -180,8 +180,8 @@ src/CMakeFiles/helper.dir/sha256.cpp.o.provides.build: src/CMakeFiles/helper.dir
 # Object files for target helper
 helper_OBJECTS = \
 "CMakeFiles/helper.dir/Helpermain.cpp.o" \
-"CMakeFiles/helper.dir/Controller.cpp.o" \
 "CMakeFiles/helper.dir/Helper.cpp.o" \
+"CMakeFiles/helper.dir/Controller.cpp.o" \
 "CMakeFiles/helper.dir/Block.cpp.o" \
 "CMakeFiles/helper.dir/sha256.cpp.o"
 
@@ -189,8 +189,8 @@ helper_OBJECTS = \
 helper_EXTERNAL_OBJECTS =
 
 src/helper: src/CMakeFiles/helper.dir/Helpermain.cpp.o
-src/helper: src/CMakeFiles/helper.dir/Controller.cpp.o
 src/helper: src/CMakeFiles/helper.dir/Helper.cpp.o
+src/helper: src/CMakeFiles/helper.dir/Controller.cpp.o
 src/helper: src/CMakeFiles/helper.dir/Block.cpp.o
 src/helper: src/CMakeFiles/helper.dir/sha256.cpp.o
 src/helper: src/CMakeFiles/helper.dir/build.make
@@ -210,8 +210,8 @@ src/CMakeFiles/helper.dir/build: src/helper
 .PHONY : src/CMakeFiles/helper.dir/build
 
 src/CMakeFiles/helper.dir/requires: src/CMakeFiles/helper.dir/Helpermain.cpp.o.requires
-src/CMakeFiles/helper.dir/requires: src/CMakeFiles/helper.dir/Controller.cpp.o.requires
 src/CMakeFiles/helper.dir/requires: src/CMakeFiles/helper.dir/Helper.cpp.o.requires
+src/CMakeFiles/helper.dir/requires: src/CMakeFiles/helper.dir/Controller.cpp.o.requires
 src/CMakeFiles/helper.dir/requires: src/CMakeFiles/helper.dir/Block.cpp.o.requires
 src/CMakeFiles/helper.dir/requires: src/CMakeFiles/helper.dir/sha256.cpp.o.requires
 

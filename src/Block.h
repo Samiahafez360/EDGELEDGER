@@ -15,6 +15,7 @@ class Block {
 public:
 	uint32_t _nNonce;
     string sHash;
+	string allblock;
     string sPrevHash;
 
     Block(uint32_t nIndexIn, const string &sDataIn);
@@ -26,7 +27,7 @@ public:
     
     string _sData;
     time_t _tTime;
-
+	
     //static void prepareGenesisBlock(Block gen);
 private:
     

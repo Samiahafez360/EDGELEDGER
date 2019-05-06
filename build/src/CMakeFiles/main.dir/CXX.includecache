@@ -546,6 +546,24 @@ string
 vector
 -
 
+../depends/libsnark/depends/libff/libff/../libff/common/rng.hpp
+cstdint
+-
+libff/common/rng.tcc
+-
+
+../depends/libsnark/depends/libff/libff/../libff/common/rng.tcc
+gmp.h
+-
+openssl/sha.h
+-
+libff/algebra/fields/bigint.hpp
+-
+libff/common/rng.hpp
+-
+libff/common/utils.hpp
+-
+
 ../depends/libsnark/depends/libff/libff/../libff/common/serialization.hpp
 istream
 -
@@ -846,6 +864,22 @@ libff/common/profiling.hpp
 libff/common/utils.hpp
 -
 
+../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/crh_gadget.hpp
+libsnark/gadgetlib1/gadgets/hashes/knapsack/knapsack_gadget.hpp
+-
+
+../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/digest_selector_gadget.hpp
+vector
+-
+libsnark/gadgetlib1/gadgets/basic_gadgets.hpp
+-
+libsnark/gadgetlib1/gadgets/hashes/hash_io.hpp
+-
+libsnark/gadgetlib1/gadgets/hashes/digest_selector_gadget.tcc
+-
+
+../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/digest_selector_gadget.tcc
+
 ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/hash_io.hpp
 cstddef
 -
@@ -857,6 +891,22 @@ libsnark/gadgetlib1/gadgets/hashes/hash_io.tcc
 -
 
 ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/hash_io.tcc
+
+../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/knapsack/knapsack_gadget.hpp
+libsnark/common/data_structures/merkle_tree.hpp
+-
+libsnark/gadgetlib1/gadgets/basic_gadgets.hpp
+-
+libsnark/gadgetlib1/gadgets/hashes/hash_io.hpp
+-
+libsnark/gadgetlib1/gadgets/hashes/knapsack/knapsack_gadget.tcc
+-
+
+../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/knapsack/knapsack_gadget.tcc
+libff/algebra/fields/field_utils.hpp
+-
+libff/common/rng.hpp
+-
 
 ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_aux.hpp
 libsnark/gadgetlib1/gadgets/basic_gadgets.hpp
@@ -891,6 +941,18 @@ libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_gadget.tcc
 -
 
 ../depends/libsnark/libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_gadget.tcc
+
+../depends/libsnark/libsnark/gadgetlib1/gadgets/merkle_tree/merkle_authentication_path_variable.hpp
+libsnark/common/data_structures/merkle_tree.hpp
+-
+libsnark/gadgetlib1/gadget.hpp
+-
+libsnark/gadgetlib1/gadgets/hashes/hash_io.hpp
+-
+libsnark/gadgetlib1/gadgets/merkle_tree/merkle_authentication_path_variable.tcc
+-
+
+../depends/libsnark/libsnark/gadgetlib1/gadgets/merkle_tree/merkle_authentication_path_variable.tcc
 
 ../depends/libsnark/libsnark/gadgetlib1/pb_variable.hpp
 cstddef
@@ -1152,6 +1214,20 @@ libff/algebra/curves/public_params.hpp
 libsnark/relations/constraint_satisfaction_problems/r1cs/r1cs.hpp
 -
 
+../src/./PoW_bulk_hash_gadget.hpp
+libsnark/common/data_structures/merkle_tree.hpp
+-
+libsnark/gadgetlib1/gadget.hpp
+-
+libsnark/gadgetlib1/gadgets/hashes/crh_gadget.hpp
+-
+libsnark/gadgetlib1/gadgets/hashes/digest_selector_gadget.hpp
+-
+libsnark/gadgetlib1/gadgets/hashes/hash_io.hpp
+-
+libsnark/gadgetlib1/gadgets/merkle_tree/merkle_authentication_path_variable.hpp
+-
+
 /home/samia/libsnarktut/src/Block.cpp
 Block.h
 /home/samia/libsnarktut/src/Block.h
@@ -1215,8 +1291,6 @@ Block.h
 /home/samia/libsnarktut/src/Block.h
 ControllerNetworkUtilities.hpp
 /home/samia/libsnarktut/src/ControllerNetworkUtilities.hpp
-Helper.h
-/home/samia/libsnarktut/src/Helper.h
 
 /home/samia/libsnarktut/src/ControllerNetworkUtilities.hpp
 libff/common/default_types/ec_pp.hpp
@@ -1251,7 +1325,23 @@ stdlib.h
 -
 netinet/in.h
 -
-string.h
+sstream
+-
+sys/socket.h
+-
+stdlib.h
+-
+netinet/in.h
+-
+string
+-
+sstream
+-
+iostream
+-
+arpa/inet.h
+-
+iostream
 -
 cstdint
 -
@@ -1279,6 +1369,10 @@ vector
 -
 iostream
 -
+iterator
+-
+map
+-
 libff/common/default_types/ec_pp.hpp
 -
 libsnark/common/default_types/r1cs_gg_ppzksnark_pp.hpp
@@ -1288,8 +1382,6 @@ libsnark/relations/constraint_satisfaction_problems/r1cs/examples/r1cs_examples.
 libsnark/common/default_types/r1cs_ppzksnark_pp.hpp
 -
 libff/algebra/fields/field_utils.hpp
--
-libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_gadget.hpp
 -
 libsnark/zk_proof_systems/ppzksnark/r1cs_gg_ppzksnark/r1cs_gg_ppzksnark.hpp
 -
@@ -1308,6 +1400,10 @@ libsnark/zk_proof_systems/ppzksnark/r1cs_ppzksnark/r1cs_ppzksnark.hpp
 libsnark/gadgetlib1/pb_variable.hpp
 -
 libsnark/gadgetlib1/protoboard.hpp
+-
+PoW_bulk_hash_gadget.hpp
+-
+libsnark/gadgetlib1/gadgets/hashes/sha256/sha256_gadget.hpp
 -
 string
 -

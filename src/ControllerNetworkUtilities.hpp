@@ -19,11 +19,26 @@
 #include <sys/socket.h> 
 #include <stdlib.h> 
 #include <netinet/in.h> 
-#include <string.h> 
+#include <sstream> 
+#include <sys/socket.h> 
+#include <stdlib.h> 
+#include <netinet/in.h> 
+
+#include <string> 
+
+#include <sstream> 
+
+#include <iostream> 
+
+#include <arpa/inet.h>
+#include <iostream> 
 #include <cstdint>
 #include <vector>
 #include "Helper.h"
 #include "Block.h"
+
+using namespace libsnark;
+using namespace std;
 
 struct response{
 		int rangeStart;
@@ -52,16 +67,18 @@ public:
     vector<char*> getAvailableHelpers(){
       return IPs;
     }
-	void send_message_to_helper(int i, const char* message, int size ){
+	
+	void send_message_to_helper(int id, const char* message, int size ){
 		printf("Controller Message : Send message to helper\r\n");
-		if( send(socket_nums[i], message, size, 0) != size )   
+		if( send(socket_nums[id], message, size, 0) != size )   
             {   
                 perror("send");   
             }
 			
 	}
-	void receive_from_helper(char* buffer, int socket){
-		printf( "Home message: rin receive function body  %s",buffer);
+	void receive_from_helper(int sizeofbuffer, char* buffer, int socket){
+		
+		printf( "Home message: in receive function body  message from the helper of size %d and equals %s", sizeofbuffer,buffer);
 			
 		
 		char* tokens;
@@ -73,7 +90,7 @@ public:
 		
 		tokens = strtok(NULL,"$");		
 		if (tokens!= NULL ) out = stoi(tokens) ;
-		
+		printf("nonce found at :%d\n",_sNonce );
 		
 		if (zk==1){
 			printf( "Home message: received message from the helper %s",buffer);
@@ -92,15 +109,27 @@ public:
 				//block is found 
 				cout<< "Block found";
 			}else {
+				printf( "ZK: Home message: reading proof");
+				default_r1cs_ppzksnark_pp::init_public_params();
+				
 				r1cs_ppzksnark_proof<default_r1cs_ppzksnark_pp> proof;
 					
 				tokens = strtok(NULL,"$");		
+				
 				if (tokens!= NULL ){
+					
 					char *bEOF =NULL; 
+					
+					printf ("\n2 ho ho hoooo");
 					stringstream is;
-					is << tokens;
-					int valread=0;
-					do
+					is.write(tokens,strlen(tokens));
+					printf ("\nSize of proof = %s", tokens);
+					printf ("\n3 ho ho hoooo");
+					
+					int valread= sizeofbuffer;
+					printf ("\nSize of proof = %d",valread);
+					
+					while (valread>0 && bEOF==NULL)
 					{
 						valread = read( socket , buffer, 1024);
 						if (valread > 0){
@@ -116,10 +145,13 @@ public:
 									is.write(buffer, valread);
 								}
 							printf ("\nSize of proof = %d", is.str().size());
+							
 						}
-				
-					}while (valread>0 && bEOF==NULL);
+						
+					}
+					printf ("from input stream to proof");
 					is>>proof;
+					
 				}else 
 				{	
 					printf ("No proof is sent");
@@ -127,6 +159,7 @@ public:
 				}
 			// verify
 			//get vk 
+			printf ("DONEERECEIVINGGGGGGGGGG");
 			r1cs_ppzksnark_verification_key<default_r1cs_ppzksnark_pp> vk;
 			for (int i=0; i< vks.size();i++){
 				if (vks[i].rangeStart =_sNonce) vk = vks[i].vk;
@@ -147,9 +180,10 @@ public:
 			s.rangeStart = 0;
 			s.out = (long)out;
 			responses.push_back(s);
-		
+			
 	
 		}
+		//send(socket , "BYE" , strlen("BYE") , 0 );
 	}
 	int zk;
 	

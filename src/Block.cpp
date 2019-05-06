@@ -10,6 +10,7 @@
     _nNonce = 0;
     _tTime = time(nullptr);
     sHash = _CalculateHash();
+	allblock = _Returnheadernononce();
 }
 static Block* prepareGenesisBlock(){
   //TODO

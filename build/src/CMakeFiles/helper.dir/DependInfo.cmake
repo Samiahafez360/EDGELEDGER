@@ -22,6 +22,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../."
   "../src/."
+  "../src/PUBLIC/src"
   "../depends/libsnark"
   "../depends/libsnark/depends/libfqfft"
   "../depends/libff"

@@ -11,7 +11,8 @@
 #include <iostream> 
 
 #include <arpa/inet.h>
-#include "Helper.cpp"
+#include "Helper.h"
+
 #define PORT 8888 
 using namespace libsnark;
 using namespace std;
@@ -59,10 +60,15 @@ int hel_connect()
 	//outchararr[out.size()] ='\0';
 	
 	//send(sock , outchararr , strlen(outchararr) , 0 );
-	send(sock , out , strchararr.size() , 0 ); 
-	printf("nonce sent %s\n",out); 
+	if (send(sock , outchararr , strchararr.size() , 0 )!= strchararr.size() ){
+		perror("send"); 
+	}
+	printf("\n nonce sent %s\n size of message %d ",outchararr,strchararr.size()); 
+	
+	
+	//valread = read( sock , buffer, 1024);
 	return 0; 
-	} 
+} 
 	
 	//totally wrong but will do it for now 
 	string submine(char* input, int sock){
@@ -87,23 +93,31 @@ int hel_connect()
 		tokens = strtok(NULL,"$");
 		printf("range:%d\n",range);
 		if (tokens!= NULL ) nDifficulty = stoi(tokens) ;
-		
-		tokens = strtok(NULL,"$");
 		printf("difficulty:%d\n",nDifficulty);
-		if (tokens!= NULL ) blocknoonce =tokens;
 		
 		tokens = strtok(NULL,"$");
+		if (tokens!= NULL ){
+			blocknoonce = new char[strlen(tokens) + 1]; 
+			strcpy(blocknoonce, tokens);
+			blocknoonce[strlen(tokens)]='\0';
+		}
+		
 		printf("block without nonce:%s\n",blocknoonce);
+		
+		tokens = strtok(NULL,"$");
+		
 		if (tokens!= NULL ) starttime = stoll(tokens);
 		
-		Helper h;
-		int out;
+		
+		int out = -1;
+		Helper* h = new Helper();
 		if (zk == 1)
 			
-		{		
-			out = h.minenozk_net(_sNonce*range,range ,nDifficulty,blocknoonce, starttime);
+		{
+			out = h->minenozk_net(_sNonce*range,range ,nDifficulty,blocknoonce, starttime);
 			printf("difficulty:%d\n",out);
-		}else
+		}
+		else
 		{
 			tokens = strtok(NULL,"$");
 			printf ("1 zk at helper \n");
@@ -134,13 +148,13 @@ int hel_connect()
 					
 				}while (valread>0 && bEOF==NULL);
 
-				printf ("2 zk at helper \n Size of pk = %l", is.str().size());
+				printf ("2 zk at helper \n Size of pk = %d", is.str().size());
 				
 				is >> pk;
 				
-				printf ("3 zk at helper \n");
-			
-				out = h.minezk(_sNonce*range,range,nDifficulty,blocknoonce, pk,starttime);
+				printf("block without nonce:%s\n",blocknoonce);
+				
+				out = h->minezk(_sNonce*range,range,nDifficulty,blocknoonce, pk,starttime);
 			
 			}else{
 				printf ("no proof sent are you sure we are mining with zkp? \n");
@@ -148,9 +162,9 @@ int hel_connect()
 		}
 		
 		stringstream ss;
-		ss<<out<<"$"<< _sNonce;
-		if (zk == 2){
-			ss<<"$"<<h.proof<<"$EOF\0";
+		ss<<_sNonce<<"$"<<out;
+		if (zk >= 2){
+			ss<<"$"<<h->proof<<"$EOF\0";
 		}
 		const string tmp =ss.str();
 		return tmp;

@@ -193,11 +193,11 @@ void ControllerNetworkUtilities:: con_connect()
                 {  //set the string terminating NULL byte on the end  
                     //of the data read  
 					printf("Controller: Something was received\n");
-                    buffer[valread] = '\0';
-					thread t (&ControllerNetworkUtilities::receive_from_helper,this,buffer);
-					t.join();
-					receive_from_helper(buffer,sd);
-                    send(sd , buffer , strlen(buffer) , 0 );   
+                    //buffer[valread] = '\0';
+					//thread t (&ControllerNetworkUtilities::receive_from_helper,this,buffer,sd);
+					//t.join();
+					receive_from_helper(valread, buffer,sd);
+                    //send(sd , buffer , strlen(buffer) , 0 );   
                 }   
             }   
         }   

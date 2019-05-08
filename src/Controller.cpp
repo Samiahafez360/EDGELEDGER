@@ -21,7 +21,7 @@
 
 using namespace libsnark;
 using namespace std;
-#define DIFFICULTY 2
+#define DIFFICULTY 3
 
 Controller::Controller(){
 	
@@ -116,7 +116,7 @@ void Controller::zkp_startMining(){
 	//prepare the attributes
 	currentblock = new Block(_vChain.size(), "next block in being mined");
 	int n = netutils->getnofAvailableHelpers();
-	long range = powl(2,DIFFICULTY+1);
+	long range = powl(2,DIFFICULTY+5);
 	long indrange = ceil (range*1.0 /n*1.0);
 	// start threading and sending to helpers
 	
@@ -171,7 +171,11 @@ void Controller::zkp_sendrangetohelper(unsigned id, uint32_t indrange ){
 	const string tmp =message.str();
 	
 	const char* inchararr = tmp.c_str();
-
+	
+	auto timebeforeminingrangesent = std::chrono::system_clock::now();
+    std::time_t start_time_range = std::chrono::system_clock::to_time_t(timebeforeminingrangesent);
+	
+	std::cout << "\n ALERT !!! :Time time before mining range sent " << std::ctime(&start_time_range);    	
 	
 	netutils->send_message_to_helper(id, inchararr,message.str().size());
 	printf("Controller Message :Message size : %d Message sent  %s \r\n", message.str().size(), message.str());

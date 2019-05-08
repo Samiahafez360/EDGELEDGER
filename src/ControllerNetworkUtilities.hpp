@@ -69,6 +69,11 @@ public:
     }
 	
 	void send_message_to_helper(int id, const char* message, int size ){
+		
+		auto timebeforeminingrangesent = std::chrono::system_clock::now();
+		std::time_t start_time_range = std::chrono::system_clock::to_time_t(timebeforeminingrangesent);
+		std::cout << "\n ALERT !!! :Time time before mining range sent " << std::ctime(&start_time_range);    	
+	
 		printf("Controller Message : Send message to helper\r\n");
 		if( send(socket_nums[id], message, size, 0) != size )   
             {   
@@ -108,6 +113,11 @@ public:
 			if (out> 0){
 				//block is found 
 				cout<< "Block found";
+				auto timeafterminingrangesent = std::chrono::system_clock::now();
+				std::time_t end_time_range = std::chrono::system_clock::to_time_t(timeafterminingrangesent);
+	
+				std::cout << "\n ALERT !!! :Time time before mining range sent " << std::ctime(&end_time_range);    	
+	
 			}else {
 				printf( "ZK: Home message: reading proof");
 				default_r1cs_ppzksnark_pp::init_public_params();
